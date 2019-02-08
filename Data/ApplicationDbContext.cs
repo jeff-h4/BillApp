@@ -14,5 +14,6 @@ namespace BillApp.Data
         }
 
         public DbSet<BillApp.Models.FeeItem> FeeItem { get; set; }
+        public DbSet<BillApp.Models.Patient> Patient { get; set; }
     }
 }
