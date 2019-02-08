@@ -6,14 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BillApp.Models;
+using BillApp.Data;
 
 namespace BillApp.Controllers
 {
     public class FeeItemsController : Controller
     {
-        private readonly FeeItemContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public FeeItemsController(FeeItemContext context)
+        public FeeItemsController(ApplicationDbContext context)
         {
             _context = context;
         }

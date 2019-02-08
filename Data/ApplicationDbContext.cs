@@ -12,5 +12,7 @@ namespace BillApp.Data
             : base(options)
         {
         }
+
+        public DbSet<BillApp.Models.FeeItem> FeeItem { get; set; }
     }
 }

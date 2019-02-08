@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using BillApp.Data;
 using BillApp.Models;
 using BillApp;
 
@@ -25,7 +26,7 @@ namespace BillApp
 
                 try
                 {
-                    var context = services.GetRequiredService<FeeItemContext>();
+                    var context = services.GetRequiredService<ApplicationDbContext>();
                     context.Database.Migrate();
                     SeedData.Initialize(services);
                 }

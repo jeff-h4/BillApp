@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using BillApp.Data;
 
 namespace BillApp.Models
 {
@@ -9,9 +10,9 @@ namespace BillApp.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new FeeItemContext(
+            using (var context = new ApplicationDbContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<FeeItemContext>>()))
+                    DbContextOptions<ApplicationDbContext>>()))
             {
                 // Look for any movies.
                 if (context.FeeItem.Any())
