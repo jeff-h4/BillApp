@@ -12,5 +12,6 @@ namespace BillApp.Models
         public decimal Code { get; set; }
         public string Notes { get; set; }
 
+        public Patient Patient { get; set; }
     }
 }

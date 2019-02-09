@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace BillApp.Models
@@ -20,5 +21,6 @@ namespace BillApp.Models
         public string PhoneNumber { get; set; }
         public string PersonalHealthNumber { get; set; }
 
+        public List<FeeItem> FeeItems { get; set; }
     }
 }
